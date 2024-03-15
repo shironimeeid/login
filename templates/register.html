@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Registration Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .event-check-section {
+            position: relative;
+            margin-top: 40px;
+            padding: 20px;
+            border-radius: 5px;
+            color: #fff; /* Adjusted for better readability on rainbow background */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            background: black; /* Fallback background */
+        }
+
+        .event-check-section::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 300%; height: 300%;
+            background: linear-gradient(45deg, 
+                                        rgba(255,0,0,0.7), 
+                                        rgba(255,165,0,0.7), 
+                                        rgba(255,255,0,0.7), 
+                                        rgba(0,255,0,0.7), 
+                                        rgba(0,0,255,0.7), 
+                                        rgba(75,0,130,0.7), 
+                                        rgba(148,0,211,0.7));
+            filter: blur(20px);
+            animation: moveBackground 10s linear infinite;
+            z-index: -1;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        @keyframes moveBackground {
+            0% { transform: translate3d(0, 0, 0); }
+            50% { transform: translate3d(-25%, -25%, 0); }
+            100% { transform: translate3d(0, 0, 0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Form Registrasi Member YNNA</h2>
+        <p class="text-center">Sebelum mendaftar, pastikan Anda telah mematuhi aturan berikut:</p>
+        <ul>
+            <li>Sudah follow akun Instagram ynna.</li>
+            <li>Nama harus lengkap, bisa nama asli atau nama panggilan event.</li>
+            <li>Harus sudah cosplay.</li>
+            <li>Screenshot bukti sudah follow <a href="https://instagram.com/ynna.community" target="_blank">@ynna.community</a>.</li>
+        </ul>
+        <div class="event-check-section text-center">
+            <span>Check Jadwal Event Terbaru:</span>
+            <a href="https://ynna-community.vercel.app/" target="_blank" class="btn btn-warning">Kunjungi Sekarang!</a>
+        </div>
+        <form action="/register" method="post" enctype="multipart/form-data" class="mt-4">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nama:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="instagram_account" class="form-label">Akun Instagram:</label>
+                <input type="text" class="form-control" id="instagram_account" name="instagram_account" required>
+            </div>
+            <div class="mb-3">
+                <label for="photo1" class="form-label">Foto 1 (Bukti Screenshot):</label>
+                <input type="file" class="form-control" id="photo1" name="photo1" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Daftar</button>
+        </form>
+    </div>
+    <footer class="text-center">
+        &copy; renn.ezzcos | 2024 YNNA
+    </footer>
+</body>
+</html>

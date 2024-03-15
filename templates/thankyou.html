@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Terima Kasih</h2>
+        <p>Terima kasih telah mendaftar di YNNA. Kami akan segera memproses data Anda.</p>
+        <!-- Tombol untuk bergabung dengan grup WhatsApp -->
+        <button id="joinGroupBtn" class="btn btn-success">Bergabung dengan Grup WhatsApp</button>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Ketika dokumen siap
+        $(document).ready(function() {
+            // Tampilkan notifikasi
+            var joinGroup = confirm("Apakah kamu ingin join grup kami?");
+            if (joinGroup) {
+                // Jika pengguna menyetujui, arahkan ke link grup WhatsApp
+                window.location.href = "https://chat.whatsapp.com/Cy9oT56QdvhLgMA0mRYCj7";
+            }
+
+            // Fungsi untuk tombol bergabung dengan grup
+            $("#joinGroupBtn").click(function() {
+                window.location.href = "https://chat.whatsapp.com/Cy9oT56QdvhLgMA0mRYCj7";
+            });
+        });
+    </script>
+</body>
+</html>
