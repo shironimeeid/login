@@ -4,8 +4,8 @@ requirements = [
 ]
 
 # Menulis ke file requirements.txt
-with open("/mnt/data/requirements.txt", "w") as file:
+with open("requirements.txt", "w") as file:
     for lib in requirements:
         file.write(lib + "\n")
 
-"/mnt/data/requirements.txt"
+"requirements.txt"
