@@ -30,7 +30,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.PORT }}
         source: "."
-        target: "/"  # Sesuaikan path di server
+        target: "/path/to/your/app"  # Sesuaikan path di server
 
     - name: Restart App
       uses: appleboy/ssh-action@master
@@ -40,5 +40,5 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          cd /path/to/your/app
+          cd /login
           # Perintah untuk restart app, misal menggunakan gunicorn
