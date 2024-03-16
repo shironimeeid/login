@@ -30,7 +30,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.PORT }}
         source: "."
-        target: "/path/to/your/app"  # Sesuaikan path di server
+        target: "app"  # Sesuaikan path di server
 
     - name: Restart App
       uses: appleboy/ssh-action@master
